@@ -93,8 +93,9 @@
             android:layout_gravity="end"
             android:layout_marginRight="@dimen/xsmall"
             android:layout_weight="1"
+            android:background="#757575"
             android:clickable="true"
-            android:background="@color/colorPrimary"
+            app:backgroundTint="@color/colorGrey"
             app:elevation="6dp"
             app:fabSize="normal"
             app:pressedTranslationZ="12dp"
@@ -201,10 +202,10 @@
             android:id="@+id/photos"
             style="@style/Title"
             android:text="@string/clients_photo"
+            android:padding="@dimen/medium"
             android:layout_marginTop="@dimen/xsmall"
             android:layout_marginLeft="@dimen/xsmall"
             android:layout_marginRight="@dimen/xsmall"
-            android:layout_marginBottom="@dimen/small"
             android:elevation="8dp"
             android:background="#fff"/>
 
@@ -213,20 +214,19 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:orientation="horizontal"
-            android:layout_marginTop="@dimen/xsmall"
+            android:layout_marginLeft="@dimen/xsmall"
+            android:layout_marginRight="@dimen/xsmall"
             android:layout_marginBottom="@dimen/large"
+            android:elevation="8dp"
             android:background="#f1f1f1" >
 
             <ImageView
                 android:id="@+id/client1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/xsmall"
                 android:layout_weight="1"
                 android:src="@drawable/client1"
-                android:elevation="3dp"
-                android:background="#fff"
-                />
+                android:elevation="3dp" />
 
             <ImageView
                 android:id="@+id/client3"
@@ -235,19 +235,16 @@
                 android:layout_marginLeft="@dimen/xsmall"
                 android:layout_weight="1"
                 android:src="@drawable/client3"
-                android:elevation="6dp"
-                android:background="#fff"/>
+                android:elevation="6dp" />
 
             <ImageView
                 android:id="@+id/client2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/small"
-                android:layout_marginRight="@dimen/small"
+                android:layout_marginLeft="@dimen/xsmall"
                 android:layout_weight="1"
                 android:src="@drawable/client2"
-                android:elevation="9dp"
-                android:background="#fff"/>
+                android:elevation="9dp" />
 
         </LinearLayout>
 

@@ -14,7 +14,7 @@
     <style name="WelcomeButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">#000</item>
+        <item name="android:background">#757575</item>
         <item name="android:textColor">#fff</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">@dimen/button_text_medium</item>
@@ -44,7 +44,7 @@
     <style name="SocialTextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">#757575</item>
         <item name="android:textSize">@dimen/caption_small</item>
         <item name="android:typeface">monospace</item>
         <item name="android:textStyle">bold</item>
