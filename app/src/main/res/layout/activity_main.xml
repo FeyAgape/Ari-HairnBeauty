@@ -52,13 +52,17 @@
     </RelativeLayout>
 
     <!-- Main Screen -->
-    <LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/app_content_layout"
+        android:visibility="invisible">
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="#F1F1F1"
-        android:orientation="vertical"
-        android:visibility="invisible">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/image"
@@ -80,13 +84,12 @@
             android:background="#fff"
             android:text="@string/intro" />
 
+        <!-- Social -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="@dimen/xsmall"
-            android:layout_marginLeft="@dimen/xsmall"
-            android:layout_marginRight="@dimen/xsmall"
+            android:layout_margin="@dimen/xsmall"
             android:elevation="6dp"
             android:background="#fff" >
 
@@ -186,10 +189,9 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:padding="@dimen/xsmall"
-            android:layout_marginLeft="@dimen/xsmall"
-            android:layout_marginRight="@dimen/xsmall"
+            android:layout_margin="@dimen/xsmall"
             android:orientation="horizontal"
             android:elevation="10dp"
             android:background="#f1f1f1" >
@@ -229,6 +231,7 @@
         </LinearLayout>
 
     </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
 
