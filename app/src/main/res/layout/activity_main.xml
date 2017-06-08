@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fey_agape.arihairnbeauty.MainActivity">
+    <!-- Welcome Screen -->
+
+    <RelativeLayout
+        android:id="@+id/welcome_message_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/welcome_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/content_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ari2" />
+
+        <!-- Comment out for now, might not be needed
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:textSize="42sp"
+            android:text="@string/title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#fff"
+            android:textStyle="bold" />   -->
+
+
+        <Button
+            style="@style/WelcomeButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/large"
+            android:onClick="dismisWelcomeMessageBox"
+            android:text="@string/button"
+            android:elevation="8dp"/>
+    </RelativeLayout>
+
+    <!-- Main Screen -->
+    <LinearLayout
+        android:id="@+id/app_content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#F1F1F1"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_size"
+            android:layout_margin="@dimen/xsmall"
+            android:contentDescription="@string/content_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/helen2d"
+            android:background="#fff"
+            android:elevation="2dp"/>
+
+        <TextView
+            android:id="@+id/intro"
+            style="@style/Description"
+            android:layout_marginLeft="@dimen/xsmall"
+            android:layout_marginRight="@dimen/xsmall"
+            android:elevation="4dp"
+            android:background="#fff"
+            android:text="@string/intro" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/xsmall"
+            android:layout_marginLeft="@dimen/xsmall"
+            android:layout_marginRight="@dimen/xsmall"
+            android:elevation="6dp"
+            android:background="#fff" >
+
+        <LinearLayout
+            android:id="@+id/Social"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/xsmall">
+
+            <ImageView
+                android:id="@+id/location"
+                style="@style/SocialImageView"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/location" />
+
+            <TextView
+                android:id="@+id/address"
+                style="@style/SocialTextView"
+                android:text="@string/location" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Social1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/xsmall">
+
+            <ImageView
+                android:id="@+id/phone"
+                style="@style/SocialImageView"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/phone" />
+
+            <TextView
+                android:id="@+id/contact"
+                style="@style/SocialTextView"
+                android:text="@string/phone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/social3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/xsmall">
+
+            <ImageView
+                android:id="@+id/fb"
+                style="@style/SocialImageView"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/fb" />
+
+            <TextView
+                android:id="@+id/social_fb"
+                style="@style/SocialTextView"
+                android:text="@string/social_fb" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/social4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/xsmall" >
+
+            <ImageView
+                android:id="@+id/insta"
+                style="@style/SocialImageView"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/insta" />
+
+            <TextView
+                android:id="@+id/social_insta"
+                style="@style/SocialTextView"
+                android:text="@string/social_insta" />
+
+        </LinearLayout>
+        </LinearLayout>
+
+        <!-- Look Book -->
+        <TextView
+            android:id="@+id/photos"
+            style="@style/Title"
+            android:text="@string/clients_photo"
+            android:layout_marginTop="@dimen/xsmall"
+            android:layout_marginLeft="@dimen/xsmall"
+            android:layout_marginRight="@dimen/xsmall"
+            android:layout_marginBottom="@dimen/small"
+            android:elevation="8dp"
+            android:background="#fff"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="@dimen/xsmall"
+            android:layout_marginLeft="@dimen/xsmall"
+            android:layout_marginRight="@dimen/xsmall"
+            android:orientation="horizontal"
+            android:elevation="10dp"
+            android:background="#f1f1f1" >
+
+            <ImageView
+                android:id="@+id/client1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/xsmall"
+                android:layout_weight="1"
+                android:src="@drawable/client1"
+                android:elevation="2dp"
+                android:background="#fff"
+                />
+
+            <ImageView
+                android:id="@+id/client3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/xsmall"
+                android:layout_weight="1"
+                android:src="@drawable/client3"
+                android:elevation="4dp"
+                android:background="#fff"/>
+
+            <ImageView
+                android:id="@+id/client2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/small"
+                android:layout_marginRight="@dimen/small"
+                android:layout_weight="1"
+                android:src="@drawable/client2"
+                android:elevation="6dp"
+                android:background="#fff"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+

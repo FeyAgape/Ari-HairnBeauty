@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Ari hnb</string>
+    <string name="name">Ari</string>
+    <string name="title">Ari HairnBeauty</string>
+    <string name="button">Welcome</string>
+    <string name="content_description">image</string>
+    <string name="location">Birmingham, United Kingdoms</string>
+    <string name="phone">+44 739 9797 192</string>
+    <string name="email">adeyerahelen@gmail.com</string>
+    <string name="social_fb">arihairnbeauty</string>
+    <string name="social_insta">helenadeyera</string>
+    <string name="intro">Mobile hairdresser and beautician.</string>
+    <string name="clients_photo">Look-Book</string>
+</resources>
