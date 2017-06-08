@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -48,7 +49,7 @@
             android:layout_margin="@dimen/large"
             android:onClick="dismisWelcomeMessageBox"
             android:text="@string/button"
-            android:elevation="8dp"/>
+            android:elevation="12dp"/>
     </RelativeLayout>
 
     <!-- Main Screen -->
@@ -84,6 +85,21 @@
             android:background="#fff"
             android:text="@string/intro" />
 
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/xsmall"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@color/colorPrimary"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            app:pressedTranslationZ="12dp"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
         <!-- Social -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,6 +108,11 @@
             android:layout_margin="@dimen/xsmall"
             android:elevation="6dp"
             android:background="#fff" >
+
+            <TextView
+                android:id="@+id/social_contact"
+                style="@style/Title"
+                android:text="@string/social_contact" />
 
         <LinearLayout
             android:id="@+id/Social"
@@ -110,6 +131,7 @@
                 android:id="@+id/address"
                 style="@style/SocialTextView"
                 android:text="@string/location" />
+
 
         </LinearLayout>
 
@@ -190,10 +212,9 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:padding="@dimen/xsmall"
-            android:layout_margin="@dimen/xsmall"
             android:orientation="horizontal"
-            android:elevation="10dp"
+            android:layout_marginTop="@dimen/xsmall"
+            android:layout_marginBottom="@dimen/large"
             android:background="#f1f1f1" >
 
             <ImageView
@@ -203,7 +224,7 @@
                 android:layout_marginLeft="@dimen/xsmall"
                 android:layout_weight="1"
                 android:src="@drawable/client1"
-                android:elevation="2dp"
+                android:elevation="3dp"
                 android:background="#fff"
                 />
 
@@ -214,7 +235,7 @@
                 android:layout_marginLeft="@dimen/xsmall"
                 android:layout_weight="1"
                 android:src="@drawable/client3"
-                android:elevation="4dp"
+                android:elevation="6dp"
                 android:background="#fff"/>
 
             <ImageView
@@ -225,7 +246,7 @@
                 android:layout_marginRight="@dimen/small"
                 android:layout_weight="1"
                 android:src="@drawable/client2"
-                android:elevation="6dp"
+                android:elevation="9dp"
                 android:background="#fff"/>
 
         </LinearLayout>
