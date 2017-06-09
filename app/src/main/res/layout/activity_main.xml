@@ -85,6 +85,10 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_size"
+                android:background="@drawable/scrim"/>
 
             <TextView
                 android:id="@+id/intro"
