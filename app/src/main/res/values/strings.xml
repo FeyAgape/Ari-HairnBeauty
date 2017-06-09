@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Ari hnb</string>
     <string name="name">Ari</string>
+    <string name="full_name">Helen Adeyera</string>
     <string name="title">Ari HairnBeauty</string>
     <string name="button">Welcome</string>
     <string name="content_description">image</string>
