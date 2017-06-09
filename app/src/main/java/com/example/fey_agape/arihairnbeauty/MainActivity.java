@@ -3,7 +3,6 @@ package com.example.fey_agape.arihairnbeauty;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         appContent = (ScrollView) findViewById(R.id.app_content_layout);
     }
 
-    public void dismisWelcomeMessageBox(View view) {
+    public void dismisWelcomeMessageScreen(View view) {
         introMessage.setVisibility(View.INVISIBLE);
         appContent.setVisibility(View.VISIBLE);
 
