@@ -24,7 +24,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ari2" />
 
-        <!-- Comment out for now, might not be needed
+        <!-- Comment out for now, might not be needed anymore
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
