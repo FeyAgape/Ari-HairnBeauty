@@ -14,7 +14,7 @@
     <style name="WelcomeButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">#757575</item>
+        <item name="android:background">@drawable/magnitude_circle</item>
         <item name="android:textColor">#fff</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">@dimen/button_text_medium</item>

@@ -24,23 +24,6 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ari2" />
 
-        <!-- Comment out for now, might not be needed anymore
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="center_horizontal"
-            android:padding="5dp"
-            android:textSize="42sp"
-            android:text="@string/title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="#fff"
-            android:textStyle="bold" />   -->
 
         <Button
             style="@style/WelcomeButton"
