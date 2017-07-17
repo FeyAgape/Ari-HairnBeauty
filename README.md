@@ -12,7 +12,10 @@ Business name
 One photo representing the business
 
 Two or more other pieces of information, such as:
+
 Contact information for the business 
+
 Address of the Business
+
 Description of business
 
