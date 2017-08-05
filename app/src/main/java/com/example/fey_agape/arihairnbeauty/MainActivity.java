@@ -1,28 +1,38 @@
 package com.example.fey_agape.arihairnbeauty;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
+import android.widget.Button;
+
+/**
+ * Created by FEY-AGAPE on 05/08/2017.
+ */
 
 public class MainActivity extends AppCompatActivity {
 
-    RelativeLayout introMessage;
-    ScrollView appContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        introMessage = (RelativeLayout) findViewById(R.id.welcome_message_layout);
-        appContent = (ScrollView) findViewById(R.id.app_content_layout);
-    }
+        // Takes you to login activity when the welcome button is clicked
+        Button welcome = (Button) findViewById(R.id.welcome_button);
 
-    public void dismisWelcomeMessageScreen(View view) {
-        introMessage.setVisibility(View.INVISIBLE);
-        appContent.setVisibility(View.VISIBLE);
+        // A click listener on the welcome button
+        welcome.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the welcome button is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link LoginActivity}
+                Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+
+                // Start the new activity
+                startActivity(loginIntent);
+            }
+        });
 
     }
 }

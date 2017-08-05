@@ -9,7 +9,7 @@
     <dimen name="icon_size">24dp</dimen>
 
     <!-- Image size. -->
-    <dimen name="image_size">250dp</dimen>
+    <dimen name="image_size">400dp</dimen>
 
     <!-- Text size. -->
     <dimen name="caption_small">12sp</dimen>
