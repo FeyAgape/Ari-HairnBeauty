@@ -1,244 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- Main Screen -->
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/app_content_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_root"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:background="@color/accountBackground"
+    tools:context=".AccountActivity">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_person" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="48dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <TextView
+        android:id="@+id/id_label"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#F1F1F1"
-        android:orientation="vertical">
+        android:layout_marginTop="88dp"
+        android:text="@string/id_label"
+        android:textColor="@color/accountLabel"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/xsmall"
-            android:background="#FFF"
-            android:elevation="4dp">
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/accountText"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_label" />
 
+    <TextView
+        android:id="@+id/info_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/accountLabel"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id" />
 
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/image_size"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:contentDescription="@string/content_description"
-                android:scaleType="centerCrop"
-                android:src="@drawable/helen2e" />
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/accountText"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_label" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/image_size"
-                android:background="@drawable/scrim" />
+    <Button
+        android:id="@+id/logout_button"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="onLogout"
+        android:text="@string/logout_label"
+        android:textAllCaps="false"
+        android:textColor="@color/accountLogoutLabel"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-            <TextView
-                android:id="@+id/intro"
-                style="@style/Title"
-                android:layout_above="@+id/intro1"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginLeft="@dimen/small"
-                android:text="@string/full_name"
-                android:textColor="#fff" />
-
-            <TextView
-                android:id="@+id/intro1"
-                style="@style/Description"
-                android:layout_alignBottom="@+id/image"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="@dimen/large"
-                android:layout_marginLeft="@dimen/small"
-                android:text="@string/intro"
-                android:textColor="#fff" />
-
-
-        </RelativeLayout>
-
-        <!-- Social -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/xsmall"
-            android:background="#fff"
-            android:elevation="6dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/social_contact"
-                style="@style/Title"
-                android:text="@string/social_contact" />
-
-            <LinearLayout
-                android:id="@+id/Social"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:padding="@dimen/xsmall">
-
-                <ImageView
-                    android:id="@+id/location"
-                    style="@style/SocialImageView"
-                    android:contentDescription="@string/content_description"
-                    android:src="@drawable/location" />
-
-                <TextView
-                    android:id="@+id/address"
-                    style="@style/SocialTextView"
-                    android:text="@string/location" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/Social1"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:padding="@dimen/xsmall">
-
-                <ImageView
-                    android:id="@+id/phone"
-                    style="@style/SocialImageView"
-                    android:contentDescription="@string/content_description"
-                    android:src="@drawable/phone" />
-
-                <TextView
-                    android:id="@+id/contact"
-                    style="@style/SocialTextView"
-                    android:autoLink="phone"
-                    android:text="@string/phone" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/social3"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:padding="@dimen/xsmall">
-
-                <ImageView
-                    android:id="@+id/fb"
-                    style="@style/SocialImageView"
-                    android:contentDescription="@string/content_description"
-                    android:src="@drawable/fb" />
-
-                <TextView
-                    android:id="@+id/social_fb"
-                    style="@style/SocialTextView"
-                    android:text="@string/social_fb" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/social4"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:padding="@dimen/xsmall">
-
-                <ImageView
-                    android:id="@+id/insta"
-                    style="@style/SocialImageView"
-                    android:contentDescription="@string/content_description"
-                    android:src="@drawable/insta" />
-
-                <TextView
-                    android:id="@+id/social_insta"
-                    style="@style/SocialTextView"
-                    android:text="@string/social_insta" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- Look Book -->
-        <TextView
-            android:id="@+id/photos"
-            style="@style/Title"
-            android:layout_marginLeft="@dimen/xsmall"
-            android:layout_marginRight="@dimen/xsmall"
-            android:layout_marginTop="@dimen/xsmall"
-            android:background="#fff"
-            android:elevation="8dp"
-            android:padding="@dimen/medium"
-            android:text="@string/clients_photo" />
-
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="220dp"
-            android:layout_marginBottom="@dimen/xsmall"
-            android:layout_marginLeft="@dimen/xsmall"
-            android:layout_marginRight="@dimen/xsmall"
-            android:layout_marginTop="@dimen/large"
-            android:elevation="10dp"
-            android:fillViewport="false">
-
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:elevation="10dp"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/client1"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:elevation="2dp"
-                    android:src="@drawable/client1" />
-
-                <ImageView
-                    android:id="@+id/client2"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/xsmall"
-                    android:elevation="4dp"
-                    android:src="@drawable/client2" />
-
-                <ImageView
-                    android:id="@+id/client3"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/xsmall"
-                    android:elevation="6dp"
-                    android:src="@drawable/client3" />
-
-                <ImageView
-                    android:id="@+id/client4"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/xsmall"
-                    android:elevation="8dp"
-                    android:src="@drawable/client6" />
-
-                <ImageView
-                    android:id="@+id/client5"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/xsmall"
-                    android:elevation="8dp"
-                    android:src="@drawable/client10" />
-
-                <ImageView
-                    android:id="@+id/client6"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/xsmall"
-                    android:elevation="8dp"
-                    android:src="@drawable/client11" />
-
-            </LinearLayout>
-        </HorizontalScrollView>
-
-    </LinearLayout>
-</ScrollView>
+</android.support.constraint.ConstraintLayout>
